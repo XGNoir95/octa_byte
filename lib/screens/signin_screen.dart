@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:octa_byte/reusable_widgets/reuseable_widget.dart';
+import 'package:octa_byte/screens/home_screen.dart';
 import 'package:octa_byte/screens/signup_screen.dart';
 import 'package:octa_byte/utils/color_utils.dart';
 
@@ -38,20 +39,22 @@ class _SignInScreenState extends State<SignInScreen> {
               padding: EdgeInsets.fromLTRB(
                 20, MediaQuery.of(context).size.height * 0.005, 20, 0,
               ),
-              child: Image.asset("assets/images/logo.png"),
+              child: Image.asset("assets/images/logo.png",height: 350,),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
               child: Text(
-                "Welcome Back, Sign In Now!",
+                "Sign In To Continue: ",
                 style: TextStyle(
                   color: Colors.amber[600],
-                  fontSize: 25,
-                  fontFamily: 'Inter',
+                  fontSize: 32,
+                  fontFamily: 'RobotoCondensed',
+                  //letterSpacing: 1
                   //fontWeight: FontWeight.bold,
                 ),
               ),
             ),
+
             Expanded(
               child: ListView(
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -59,15 +62,18 @@ class _SignInScreenState extends State<SignInScreen> {
                   SizedBox(
                     height: 30,
                   ),
-                  reusableTextField("Enter UserName", Icons.person_outline, false, _emailTextController),
+
+                  reusableTextField("UserName", Icons.person, false, _emailTextController),
                   SizedBox(
                     height: 30,
                   ),
-                  reusableTextField("Enter Password", Icons.lock_outline, true, _passwordTextController),
+                  reusableTextField("Password", Icons.lock, true, _passwordTextController),
                   SizedBox(
                     height: 30,
                   ),
-                  signInSignUpButton(context, true, () {}),
+                  signInSignUpButton(context, true, () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                  }),
                   signUpOption(),
                 ],
               ),
@@ -82,14 +88,14 @@ class _SignInScreenState extends State<SignInScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("Don't have an account?", style: TextStyle(fontSize: 18,color: Colors.white70,fontWeight: FontWeight.bold,)),
+        const Text("Don't have an account?", style: TextStyle(fontSize: 18,color: Colors.white70,fontWeight: FontWeight.bold,fontFamily: 'RobotoCondensed',)),
         GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpScreen()));
           },
           child: const Text(
             " Sign Up",
-            style: TextStyle(fontSize: 18,color: Colors.amber, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18,color: Colors.amber, fontWeight: FontWeight.bold,fontFamily: 'RobotoCondensed',),
           ),
         )
       ],

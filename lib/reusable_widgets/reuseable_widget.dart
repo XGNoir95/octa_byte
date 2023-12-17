@@ -15,12 +15,12 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType, Tex
     autocorrect: !isPasswordType,
     cursorColor: Colors.white,
     style: TextStyle(color: Colors.white.withOpacity(0.9)),
-    decoration: InputDecoration(prefixIcon: Icon(icon,color: Colors.white70,),
+    decoration: InputDecoration(prefixIcon: Icon(icon,color: Colors.amber[600],),
     labelText: text,
-      labelStyle: TextStyle(color: Colors.white.withOpacity(0.9)),
+      labelStyle: TextStyle(color: Colors.white.withOpacity(0.9),fontSize: 17,letterSpacing: 1.5,fontFamily: 'RobotoCondensed'),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor: Colors.white.withOpacity(0.3),
+      fillColor: Colors.white.withOpacity(0.2),
       border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30.0),
           borderSide: const BorderSide(width: 0, style: BorderStyle.none)),
@@ -44,7 +44,7 @@ Container signInSignUpButton(BuildContext context, bool isLogin, Function onTap)
       child: Text(
         isLogin ? 'LOG IN' : 'SIGN UP',
         style: const TextStyle(
-          color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 16
+          color: Colors.black87, fontWeight: FontWeight.bold, fontSize: 19,
         ),
       ),
       style: ButtonStyle(
@@ -59,3 +59,4 @@ Container signInSignUpButton(BuildContext context, bool isLogin, Function onTap)
     ),
   );
 }
+
