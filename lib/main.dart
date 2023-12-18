@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SD Project',
       home: const WelcomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
