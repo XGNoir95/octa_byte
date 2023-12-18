@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:octa_byte/reusable_widgets/reuseable_widget.dart';
 import 'package:octa_byte/screens/home_screen.dart';
 import 'package:octa_byte/utils/color_utils.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
@@ -19,6 +20,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,backgroundColor: Colors.white,
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.transparent,
         elevation: 0,
         // title: const Text(
@@ -33,7 +35,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
           gradient: LinearGradient(colors: [
             hexStringToColor("2F2F32"),
             hexStringToColor("ff0f0d0d"),
-            hexStringToColor("000000")
+            hexStringToColor("000000"),
+            //hexStringToColor("2F2F32"),
           ],begin: Alignment.topCenter, end: Alignment.bottomCenter)),
 
         child:Column(
@@ -47,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Padding(
               padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
               child: Text(
-                "Enter User Information:  ",
+                "  Enter User Information:  ",
                 style: TextStyle(
                   color: Colors.amber[600],
                   fontSize: 32,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:octa_byte/screens/signin_screen.dart';
+import 'package:octa_byte/screens/welcome_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SD Project',
-      home: const SignInScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
