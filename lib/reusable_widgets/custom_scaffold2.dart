@@ -1,7 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-class CustomScaffold extends StatelessWidget {
-  const CustomScaffold({super.key, this.child});
+class CustomScaffold2 extends StatelessWidget {
+  const CustomScaffold2({super.key, this.child});
   final Widget? child;
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,9 @@ class CustomScaffold extends StatelessWidget {
             width: double.infinity,
             height: double.infinity,
           ),
-
+          Padding(padding: EdgeInsets.fromLTRB(60, MediaQuery.of(context).size.height*0.0005, 60, 0,),
+            child: Image.asset("assets/images/logo.png",height: 300,),
+          ),
           SafeArea(
             child: child!,
           ),

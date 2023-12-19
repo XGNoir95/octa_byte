@@ -17,7 +17,7 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType, Tex
     style: TextStyle(color: Colors.white.withOpacity(0.9)),
     decoration: InputDecoration(prefixIcon: Icon(icon,color: Colors.amber[600],),
     labelText: text,
-      labelStyle: TextStyle(color: Colors.white.withOpacity(0.9),fontSize: 17,letterSpacing: 1.5,fontFamily: 'RobotoCondensed'),
+      labelStyle: TextStyle(color: Colors.white.withOpacity(0.9),fontSize: 17,letterSpacing: 1.5,fontWeight: FontWeight.bold,/*fontFamily: 'RobotoCondensed'*/),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
       fillColor: Colors.white.withOpacity(0.2),
@@ -102,4 +102,3 @@ class WelcomeButton extends StatelessWidget {
     );
   }
 }
-

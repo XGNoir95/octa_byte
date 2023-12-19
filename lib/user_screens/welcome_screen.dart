@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:octa_byte/screens/signin_screen.dart';
-import 'package:octa_byte/screens/signup_screen.dart';
+import 'package:octa_byte/user_screens/signin_screen.dart';
+import 'package:octa_byte/user_screens/signup_screen.dart';
 import 'package:octa_byte/reusable_widgets/reuseable_widget.dart';
 import 'package:octa_byte/reusable_widgets/custom_scaffold.dart';
 
@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomRight,
               child: Row(
                 children: [
-                   const Expanded(
+                  const Expanded(
                     child: WelcomeButton(
                       buttonText: 'SIGN IN',
                       onTap: SignInScreen(),
@@ -65,7 +65,7 @@ class WelcomeScreen extends StatelessWidget {
                       buttonText: 'SIGN UP',
                       onTap: const SignUpScreen(),
                       color: Colors.grey[850],
-                      textColor: Colors.white,
+                      textColor: Colors.amber,
                     ),
                   ),
                 ],

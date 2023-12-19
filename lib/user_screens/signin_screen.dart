@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:octa_byte/navigation_menu.dart';
 import 'package:octa_byte/reusable_widgets/reuseable_widget.dart';
-import 'package:octa_byte/screens/home_screen.dart';
-import 'package:octa_byte/screens/signup_screen.dart';
+import 'package:octa_byte/dashboard_screens/home_screen.dart';
+import 'package:octa_byte/user_screens/signup_screen.dart';
 import 'package:octa_byte/utils/color_utils.dart';
 import 'package:octa_byte/reusable_widgets/custom_scaffold.dart';
 
@@ -73,7 +74,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     height: 20,
                   ),
                   signInSignUpButton(context, true, () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>NavigationMenu()));
                   }),
                   signUpOption(),
                 ],
