@@ -4,6 +4,13 @@ import 'package:octa_byte/user_screens/welcome_screen.dart';
 void main() {
   runApp(MyApp());
 }
+class Dashboard extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Container();
+  }
+}
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
